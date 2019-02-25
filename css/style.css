@@ -1,11 +1,25 @@
 *{
 	margin: 0;
 	padding: 0;
-	font-family: montserrat;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: thin;
 }
 
 /* ---------------------------nav-------------------------------- */
+
+.skip{
+	position: absolute;
+	top:-15%;
+}
+
+.skip:focus{
+	position: absolute;
+	top: 0%
+}
+
+.main{
+	background:url(../images/background.gif); 
+}
 
 a:link {
   text-decoration: none;
@@ -37,7 +51,7 @@ nav li{
 	cursor: pointer;
 }
 
-a:hover, li:hover{
+a:hover, nav li:hover{
 	text-decoration: underline;
 }
 
@@ -347,22 +361,67 @@ section.banner{
 	flex-direction: row;
 }
 
-div.right_side img{
-	width: 100%
+div.banner_right_side img{
+	width: 75%;
+	padding-left: 100px;
+}
+
+div.banner_left_side{
+	width: 100%;
+	position:relative;
+	left:10%;
+	padding-bottom: 2%;
+	padding-top: 2%;
+}
+
+div.banner_left_side h2{
+	color: green;
+	padding-bottom: 2%;
 }
 
 img#personas{
 	width: 30px;
+	padding-bottom: 2%;
+}
+
+
+div.card_img > img{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	display: inline-grid;
+	width: 30%;
+}
+
+div.delv_group > img{
+	width: 50%;
+}
+
+div.extra{
+	display: flex;
+	flex-direction: row;
+}
+
+div.extra img{
+	width: 100%;
+	padding-left: 15%;
+}
+
+div.extra p{
+	position: relative;
+	top:20%;
 }
 
 /* -----------------------------Footer--------------------------------------- */
 footer {
-	position: left;
 	clear: both;
 	color: #ffffff;
 	background-color: rgb(75, 75, 75);
 	text-align:center;
-	height: 50px;	
-	line-height: 50px;
+	height: 100px;	
+	line-height: 30px;
 	font-size: 80%;
+}
+
+footer > a{
+	color: white;
 }
