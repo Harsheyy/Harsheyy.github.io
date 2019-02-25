@@ -260,7 +260,7 @@ div.page_img img{
 /* -----------------------------bs--------------------------------------- */
 
 section.header_bs{
-	background-color: #29a329;
+	background-color: green;
 	height: 500px;
 	display: flex;
 	flex-direction: row;
@@ -281,7 +281,6 @@ section.bs_sec{
 
 section.bs_sec h2{
 	padding-bottom: 1%;
-	color: #29A84A;
 	font-size: 18px;
 }
 
