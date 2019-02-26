@@ -18,7 +18,7 @@
 }
 
 .main{
-	background:url(../images/background.gif); 
+	background:url(../images/background.jpg); 
 }
 
 a:link {
@@ -73,16 +73,19 @@ a.current:link, a.current:visited {
 	top: 100%;
 	left: 0;
 	text-align: left;
-	display: none;
 }
 
-.dropdown-content li{
+.dropdown-content{
 	background-color: #fffff0;
 	width: 100%;
+	visibility: hidden;
+	z-index: -10;
 }
 
 .dropdown:hover .dropdown-content{
 	display: block;
+	visibility: visible;
+	z-index: 10;
 }
 
 /* ---------------------------Home-------------------------------- */
