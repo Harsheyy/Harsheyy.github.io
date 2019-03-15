@@ -1,3 +1,6 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.10.7/typeit.min.js"> </script>
+<meta name = ‘viewport’ content=‘width=device-width, initial-scale=1’>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +14,15 @@
 </head>
 <a href="#content" class="skip">Skip to content</a>
 <header>
-    <nav>
+    <nav role="navigation">
         <ul>
             <li ><a href = "index.html" class="current"><img src="images/logo.png" class="logo" alt="logo"/></a>
-            <li class="dropdown"> Work
-                <ul class='dropdown-content'>
-                    <li><a href = "bschool.html">501</a></li>
-                    <li><a href = "clinc.html">Clinc</a></li>
-                </ul>
+            <li><a href="#" aria-haspopup="true">Work</a>
+            	<ul class="dropdown" aria-label="submenu">
+            		<li><a href="bschool.html">BSchool Travels</a></li>
+            		<li><a href="clinc.html">Clinc</a></li>
+            	</ul>
+            </li>	
             <li><a href = "about.html">About</a></li>
         </ul>
     </nav>
@@ -28,11 +32,16 @@
 <body class="main">
 	<div class="main_page">
 		<h1>Hello! I'm Harsh.</h1>
-    	<h2> Graduate student at University of Michigan studying about user-centered design<br>
+    	<h2> Graduate student at University of Michigan studying about <span class="type-it">user-centered design<br>user research<br>design thinking<br>entrepreneurship<br>programming</span>
+    	<script>
+			new TypeIt('.type-it', {
+     		strings: ['Enter your string here!', 'Another string!'], breakLines: false, loop:true, speed:250});
+		</script>
+		<br>
         I currently work at <a class="clinc" href="http://www.clinc.com"><u>Clinc</u></a>, helping to optimize platform navigation and usability. </h2>	
 	</div>
 
-    <img src="images/arrow.png" class="arrow" alt="arrow"/>
+	<img src="images/arrow.png" class="arrow" alt="arrow"/>
 
     <footer>
     	<a href="https://www.linkedin.com/in/hkdesai/"><i  class="fab fa-linkedin fa-3x" title="Linkedin"></i>
