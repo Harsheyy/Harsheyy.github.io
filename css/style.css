@@ -45,6 +45,8 @@ nav{
 }
 
 nav li{
+	background: rgba(255, 255, 255, 0.9);
+	background-opacity: 75%;
 	box-sizing: border-box;
 	display: inline-block;
 	padding: 12px;
@@ -55,7 +57,7 @@ nav a:hover, nav li:hover, nav li:focus-within{
 	text-decoration: underline;
 }
 
-a.current:link, a.current:visited {
+nav a.current:link, nav a.current:visited {
   color: blue;
 }
 
