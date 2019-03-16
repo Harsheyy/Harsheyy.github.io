@@ -59,6 +59,7 @@ nav{
 	font-weight: thin;
 	float: right;
 	padding-top: 20px;
+	padding-bottom: 15px;
 }
 
 nav li{
@@ -110,15 +111,16 @@ div.main_page{
 }
 
 div.main_page h1{
-	font-size: 64px;
+	font-size: 42px;
 	font-weight: normal;
 	padding-bottom: 2%;
 }
 
 div.main_page h2{
 	font-weight: light;
-	color: DodgerBlue ;
 	font-weight: normal;
+	color: DodgerBlue;
+	font-size: 12px;
 }
 
 .type-it{
@@ -133,16 +135,33 @@ img.arrow {
 	width: 15%;
 }
 
+@media only screen and (min-width: 800px) {
+	div.main_page h1{
+		font-size: 64px;
+		font-weight: normal;
+		padding-bottom: 2%;
+	}
+
+	div.main_page h2{
+		font-weight: light;
+		color: DodgerBlue;
+		font-weight: normal;
+		font-size: 24px;
+	}	
+
+}
+
+
 /* -----------------------------About--------------------------------------- */
 
 img.me{
-	width: 100%;
-	height: auto;
+	width: 45%;
 }
 
 div.me{
-	display: inline-block;
-	width: 2000px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 div.about{
@@ -152,7 +171,7 @@ div.about{
 
 section.flex-about{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
 div.about h1{
@@ -182,6 +201,24 @@ a.key{
 	color:#aa010f;
 }
 
+@media only screen and (min-width: 800px) {
+	img.me{
+		width: 100%;
+		height: auto;
+	}
+
+	div.me{
+		display: inline-block;
+		width: 2000px;
+	}
+
+	section.flex-about{
+		display: flex;
+		flex-direction: row;
+	}
+
+}
+
 /* -----------------------------globals--------------------------------------- */
 div.header_info{
 	display: inline-block;
@@ -194,28 +231,28 @@ div.header_info{
 }
 
 div.header_info h1{
-	font-size: 34px;
+	font-size: 24px;
 	padding-bottom: 10%;
 }
 
 div.header_info h3{
 	width: 65%;
-	font-size: 34px;
+	font-size: 18px;
 	padding-bottom: 10%;
 	font-weight: normal;
 }
 
 div.header_info p{
 	width: 65%;
-	font-size: 16px;
+	font-size: 12px;
 	padding-bottom: 10%;
 }
 
 div.header_img{
 	display: inline-block;
 	height: auto;
-	width: 55%;
-	margin-left: 2%;
+	width: 75%;
+	margin-left: 15%;
 }
 
 section.overview_sec{
@@ -244,7 +281,7 @@ div.overview p{
 	position: relative;
 	left: 25%;
 	width: 80%;
-	font-size: 18px;
+	font-size: 12px;
 	font-weight: 200;
 	font-weight: lighter;
 	line-height: 1.2;
@@ -270,10 +307,66 @@ div.overview_info{
 	padding-top: 3%;
 }
 
+div.overview_info p{
+	font-size: 12px;
+}
+
 div.page_img img{
 	height: auto;
 	width: 100%;
 	margin-bottom: 3%;
+}
+
+@media only screen and (min-width: 1000px) {
+	div.header_info{
+		display: inline-block;
+		height: auto;
+		width: 50%;
+		color: white;
+		position: relative;
+		left:13%;
+		top:20%;
+	}
+
+	div.header_info h1{
+		font-size: 34px;
+		padding-bottom: 10%;
+	}
+
+	div.header_info h3{
+		width: 65%;
+		font-size: 34px;
+		padding-bottom: 10%;
+		font-weight: normal;
+	}
+
+	div.header_info p{
+		width: 65%;
+		font-size: 16px;
+		padding-bottom: 10%;
+	}
+
+	div.header_img{
+		display: inline-block;
+		height: auto;
+		width: 55%;
+		margin-left: 5%;
+	}
+
+	div.overview p{
+		position: relative;
+		left: 25%;
+		width: 80%;
+		font-size: 18px;
+		font-weight: 200;
+		font-weight: lighter;
+		line-height: 1.2;
+	}
+
+	div.overview_info p{
+		font-size: 18px;
+	}
+
 }
 
 /* -----------------------------bs--------------------------------------- */
@@ -311,7 +404,7 @@ section.bs_sec p, section.bs_sec li{
 
 div.bs_group{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	padding-top: 2%;
 	margin-left: 27%;
 }
@@ -336,6 +429,15 @@ img#communication{
 	margin-bottom: 3%;
 }
 
+@media only screen and (min-width: 800px) {
+	div.bs_group{
+		display: flex;
+		flex-direction: row;
+		padding-top: 2%;
+		margin-left: 27%;
+	}
+
+}
 /* -----------------------------clinc--------------------------------------- */
 
 section.header_clinc{
@@ -376,7 +478,7 @@ section.clinc_sec p, section.clinc_sec li{
 section.banner{
 	background-color: #f1f1f3;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
 div.banner_right_side img{
@@ -390,6 +492,7 @@ div.banner_left_side{
 	left:10%;
 	padding-bottom: 2%;
 	padding-top: 2%;
+	font-size: 8px;
 }
 
 div.banner_left_side h2{
@@ -398,7 +501,7 @@ div.banner_left_side h2{
 }
 
 img.personas{
-	width: 30px;
+	width: 15px;
 	padding-bottom: 2%;
 }
 
@@ -416,7 +519,7 @@ div.delv_group > img{
 
 div.extra{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
 div.extra img{
@@ -427,6 +530,41 @@ div.extra img{
 div.extra p{
 	position: relative;
 	top:20%;
+	font-size: 8px;
+}
+
+@media only screen and (min-width: 800px) {
+	section.banner{
+		background-color: #f1f1f3;
+		display: flex;
+		flex-direction: row;
+	}
+
+	div.banner_left_side{
+		width: 100%;
+		position:relative;
+		left:10%;
+		padding-bottom: 2%;
+		padding-top: 2%;
+		font-size: 16px;
+	}
+
+	img.personas{
+		width: 30px;
+		padding-bottom: 2%;
+	}
+
+	div.extra{
+		display: flex;
+		flex-direction: row;
+	}
+
+	div.extra p{
+		position: relative;
+		top:20%;
+		font-size: 16px;
+	}
+
 }
 
 /* -----------------------------Footer--------------------------------------- */
