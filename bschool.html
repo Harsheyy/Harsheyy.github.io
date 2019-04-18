@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title >BSchool Travels</title>
 </head>
 <a href="#content" class="skip">Skip to content</a>
@@ -73,9 +74,8 @@
 		</div>
 	</section>
 
-	<div class="page_img">
-		<img src="images/group.jpeg" class="group" alt="group" />
-	</div>
+	<div class="parallax"></div>
+	<br>
 
 	<section class="bs_sec">
 		<h2>Problem</h2>
@@ -172,5 +172,16 @@
 			<p>&copy; -Harsh 2019</p>
 		</footer>
 	</body>
-	</html>
+			<script>
+			$(document).ready(function() {
+				var $header = $("header"),
+				$clone = $header.before($header.clone().addClass("clone"));
+
+				$(window).on("scroll", function() {
+					var fromTop = $("body").scrollTop();
+					$('body').toggleClass("down", (fromTop > 200));
+				});
+			});	
+		</script>
+</html>
 

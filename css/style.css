@@ -32,10 +32,30 @@ a, li {
 .nav_container{
 	width: 80%;
 	margin: 0 auto;
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	padding: 1em 0;
 }
 
 header{
 	background: white;
+	position: relative;
+	width: 100%;
+}
+
+header.clone {background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(0%);
+  transition: 0.2s transform cubic-bezier(.3,.73,.3,.74);
+  z-index: 1;
+}
+
+body.down header.clone {
+  transform: translateY(0);
 }
 
 header::after{
@@ -47,7 +67,7 @@ header::after{
 img.logo {
 	float: left;
 	height: auto;
-	width: 5%;
+	width: 50px;
 	padding-left: 35px;
 	padding-top: 5px;
 }
@@ -57,9 +77,6 @@ nav{
 	color: #eee;
 	font-size: 24px;
 	font-weight: thin;
-	float: right;
-	padding-top: 20px;
-	padding-bottom: 15px;
 }
 
 nav li{
@@ -99,6 +116,7 @@ nav ul li:focus-within > ul,
 	clear: both;
 	width: 100%;
 }
+
 
 /* ---------------------------Home-------------------------------- */
 
@@ -400,6 +418,20 @@ section.bs_sec p, section.bs_sec li{
 	font-size: 14px;
 	font-weight: lighter;
 	line-height: 1.5;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../images/group.jpeg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.bs_group{

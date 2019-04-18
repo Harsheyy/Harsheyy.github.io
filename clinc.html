@@ -12,12 +12,12 @@
 
 		gtag('config', 'UA-138610489-1');
 	</script>
-
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" href="images/logo.png" />
 	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title >Clinc</title>
 </head>
 <a href="#content" class="skip">Skip to content</a>
@@ -238,6 +238,17 @@
 
 		</section>
 
+		<script>
+			$(document).ready(function() {
+				var $header = $("header"),
+				$clone = $header.before($header.clone().addClass("clone"));
+
+				$(window).on("scroll", function() {
+					var fromTop = $("body").scrollTop();
+					$('body').toggleClass("down", (fromTop > 200));
+				});
+			});	
+		</script>
 
 		<footer>
 			<a href="https://www.linkedin.com/in/hkdesai/"><i  class="fab fa-linkedin fa-3x" title="Linkedin"></i>
@@ -246,5 +257,5 @@
 		</footer>
 	</body>
 
-	</html>
+</html>
 

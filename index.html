@@ -21,28 +21,29 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title >Harsh's Portfolio</title>
 </head>
 <a href="#content" class="skip">Skip to content</a>
-<header>
-	<div class="nav_container">
-		<a href="index.html"><img src="images/logo.png" class="logo" alt="logo"/></a>
-		<nav role="navigation">
-			<ul class="right_nav">
-				<li><a href="#" aria-haspopup="true">Work</a>
-					<ul class="dropdown" aria-label="submenu">
-						<li><a href="bschool.html">BSchool Travels</a></li>
-						<li><a href="clinc.html">Clinc</a></li>
-					</ul>
-				</li>	
-				<li><a href = "about.html">About</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
 
 <a name="content"></a>
 <body class="main">
+	<header>
+		<div class="nav_container">
+			<a href="index.html"><img src="images/logo.png" class="logo" alt="logo"/></a>
+			<nav role="navigation">
+				<ul class="right_nav">
+					<li><a href="#" aria-haspopup="true">Work</a>
+						<ul class="dropdown" aria-label="submenu">
+							<li><a href="bschool.html">BSchool Travels</a></li>
+							<li><a href="clinc.html">Clinc</a></li>
+						</ul>
+					</li>	
+					<li><a href = "about.html">About</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 	<div class="main_page">
 		<h1>Hello! I'm Harsh.</h1>
 		<h2> Graduate student at University of Michigan studying about <span class="type-it">user-centered design<br>user research<br>design thinking<br>entrepreneurship<br>programming</span>
@@ -55,7 +56,17 @@
 			</div>
 
 			<img src="images/arrow.png" class="arrow" alt="arrow"/>
+			<script>
+				$(document).ready(function() {
+					var $header = $("header"),
+					$clone = $header.before($header.clone().addClass("clone"));
 
+					$(window).on("scroll", function() {
+						var fromTop = $("body").scrollTop();
+						$('body').toggleClass("down", (fromTop > 200));
+					});
+				});	
+			</script>
 			<footer>
 				<a href="https://www.linkedin.com/in/hkdesai/"><i  class="fab fa-linkedin fa-3x" title="Linkedin"></i>
 				</a>
