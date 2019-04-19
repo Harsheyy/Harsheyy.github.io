@@ -153,6 +153,17 @@ img.arrow {
 	width: 15%;
 }
 
+.work{
+	height: 2000px;
+}
+
+.work h1{
+	display: flex;
+	justify-content: center;
+	font-size: 42px;
+
+}
+
 @media only screen and (min-width: 800px) {
 	div.main_page h1{
 		font-size: 64px;
@@ -459,6 +470,11 @@ img#communication{
 	height: auto;
 	width: 100%;
 	margin-bottom: 3%;
+}
+
+.video_container{
+	display: flex;
+	justify-content: center;
 }
 
 @media only screen and (min-width: 800px) {
