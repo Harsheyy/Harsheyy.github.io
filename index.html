@@ -55,18 +55,8 @@
 	</div>
 
 	<img src="images/arrow.png" class="arrow" alt="arrow"/>
-	<script>
-		$(document).ready(function() {
-			var $header = $("header"),
-			$clone = $header.before($header.clone().addClass("clone"));
-			$(window).on("scroll", function() {
-				var fromTop = $("body").scrollTop();
-				$('body').toggleClass("down", (fromTop > 200));
-			});
-		});	
-	</script>
-
-	<section class="Work">
+	
+	<section class="work">
 		<div class="flip-card">
 			<div class="flip-card-inner">
 				<div class="flip-card-front">
@@ -96,6 +86,17 @@
 			</div>
 		</div>
 	</section>
+
+	<script>
+		$(document).ready(function() {
+			var $header = $("header"),
+			$clone = $header.before($header.clone().addClass("clone"));
+			$(window).on("scroll", function() {
+				var fromTop = $("body").scrollTop();
+				$('body').toggleClass("down", (fromTop > 200));
+			});
+		});	
+	</script>
 	<footer>
 		<a href="https://www.linkedin.com/in/hkdesai/"><i  class="fab fa-linkedin fa-3x" title="Linkedin"></i></a>
 		<p>&copy; -Harsh 2019</p>
